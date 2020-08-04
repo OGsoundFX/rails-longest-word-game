@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>New Game</h1>
+
+    <div class="d-flex">
+      <ul class="list-inline justify-content-center">
+  <% @array_of_letters.each do |letter| %>
+        <li class="list-inline-item letters"> <%= letter %> </li>
+  <% end %>
+      </ul>
+    </div>
+
+    <form action="/score">
+      <input type="text" name="entry">
+      <%= hidden_field_tag :letters, @array_of_letters %>
+      <input type="submit" value="enter">
+    </form>
+</div>
