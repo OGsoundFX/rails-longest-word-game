@@ -1,1 +1,9 @@
 <h1>score</h1>
+
+<% if @validity == false %>
+  <h5> Sorry but <%= @entry %> can't be build out of <%= @array_of_letters.join(',').upcase %></h5>
+<% elsif @found == false %>
+  <h5> <%= @entry, class: 'entry' %> does not exist</h5>
+<% else %>
+  <h5> Well done! <%= @entry %> is a valid word </h5>
+<% end %>
