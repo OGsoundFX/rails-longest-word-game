@@ -20,3 +20,21 @@ $light-blue: #48c5d7;
   color: $light-blue;
   font-weight: bold;
 }
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover
+{
+  color: white;
+  text-decoration:none;
+  cursor:pointer;
+  background-color: grey;
+}
+
+.btn:hover {
+  background-color: grey;
+  border: solid 1px grey;
+}

@@ -1,6 +1,9 @@
 require "open-uri"
 
 class GamesController < ApplicationController
+  def home
+  end
+
   def new
     @array_of_letters = []
     7.times do

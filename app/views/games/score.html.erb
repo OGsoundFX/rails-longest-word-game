@@ -1,9 +1,13 @@
-<h1>score</h1>
+<div class="container">
+  <h1>score</h1>
 
-<% if @validity == false %>
-  <h5> Sorry but <%= @entry %> can't be build out of <%= @array_of_letters.join(',').upcase %></h5>
-<% elsif @found == false %>
-  <h5> <%= @entry, class: 'entry' %> does not exist</h5>
-<% else %>
-  <h5> Well done! <%= @entry %> is a valid word </h5>
-<% end %>
+  <% if @validity == false %>
+    <h5> Sorry but <strong> <%= @entry %> </strong> can't be build out of <%= @array_of_letters.join(',').upcase %></h5>
+  <% elsif @found == false %>
+    <h5> <strong> <%= @entry %> </strong> does not exist</h5>
+  <% else %>
+    <h5> Well done! <strong> <%= @entry %> </strong> is a valid word </h5>
+  <% end %>
+
+  <button type="button" class="btn btn-primary"><%= link_to "Play again", new_path %></button>
+</div>
